@@ -25,4 +25,8 @@ end_time = (dt.datetime.now() - dt.timedelta(days=30)).strftime("%Y-%m-%d")
 data = yf.download(tickers=f'{crypto}-{currency}',
                    start=start_time, end=end_time)
 
-mpl.plot(data, type='candle', style='yahoo', volume=True)
+# mpl.plot(data, type='candle', style='yahoo', volume=True)
+
+plt.plot(data['Close'], label=crypto)
+plt.legend(loc="upper left")
+plt.show()
