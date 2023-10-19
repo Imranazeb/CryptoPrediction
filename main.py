@@ -1,10 +1,18 @@
+""" THIS PROGRAM WILL LOAD 6 MONTHS OF ETH PRICES FROM YAHOO FINANCE api & USE 
+MACHINE LEARNING TO PREDICT THE DAILY PRICE. 
+
+It will then predict the price based on previous data. When plotting the graph the program
+is agnostic to the price next day. Duration of data can be changed to years or decades on powerful machines. 
+
+Fianlly it will ouput the result as a graphic. """
+
 import datetime as dt
 import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import yfinance as yf
-import mplfinance as mpl
+
 
 from sklearn.preprocessing import MinMaxScaler
 from keras.api._v2 import keras
